@@ -32,8 +32,13 @@ export default {
    computed: {
   ...mapState({
     posts: state => state.post.posts
-  })
-    },
+  }) 
+},
+methods: {
+  viewDetails(postId){
+    this.$router.push({path: `/post/${postId}/details`})
+  }
+}
 
     
 }

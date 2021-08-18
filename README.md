@@ -1,7 +1,8 @@
 # nuxt-bootstrap-vue-uifort-kit
+Vuex/Axios calls to external api and display posts and single posts, image hard coded but can bind to data if any present in object
+Store modules.
 
-
-Nuxt.js project + Bootstrap Vue uifort CSS Framework with customized uifort component examples in examples folder.
+Nuxt.js project + Bootstrap Vue uifort CSS Framework with other customized uifort component examples in examples folder.
 
 Demo at: https://lucky-pizzas.surge.sh/
 
