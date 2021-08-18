@@ -1,26 +1,26 @@
 <template>
-    <div class="text-center" >  
-    <b-card 
-    title= "Post Title"  
+    <div class="text-center mt-5 mb-5" > 
+    <h1 class="mb-3">Post List</h1>
+    <b-card
+    v-for="post in posts" :key="post.id"
+    :title="post.title"
     img-src="https://picsum.photos/600/300/?image=25"
     img-alt="Image"
-    img-top
     tag="article"
-    style="max-width: 20rem;"
-    class="text-center mt-3 mb-2"
+    style="max-width: 75rem;"
+    class="mb-2 mt-2"
   >
-    <h1>Post List</h1>
-<h2 v-for="post in posts" :key="post.id">{{ post.title}}</h2>
- <div class="card-header mt-3"></div> 
-
- </b-card>
- </div>
-
+    <b-card-text>
+     {{post.body}}
+    </b-card-text>
+   <b-button href="#" variant="primary" @click="viewDetails(post.id)">View Details</b-button>
+  </b-card> 
+</div>
 </template>
 <script>
 import {mapState} from 'vuex'
 export default {
-    name: 'PostList',
+ name: 'PostList',
  async fetch({store, $axios, error}){
   try{
  const {data} = await $axios.get('/posts');
