@@ -3,7 +3,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'nuxt-bootstrap-vue-uikit',
+    title: 'nuxt-axios-vuex-blog-app',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -43,6 +43,10 @@ modules: [
   '@nuxtjs/axios',
  '@nuxtjs/style-resources'
 ],
+axios: {
+  // See https://github.com/nuxt-community/axios-module#options
+  baseURL: process.env.API_URL || 'https://jsonplaceholder.typicode.com'
+},
 module: {
   rules: [
     {
